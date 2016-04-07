@@ -4,12 +4,12 @@
 
 ```
 # apt-get install apt-mirror
-# vi /etc/apt/sources.list
+# vi /etc/apt/mirror.list
 
-ミラーを以下の3行のみにする(1番上の1行だけでいいかも？)
-deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty main restricted main/debian-installer restricted/debian-installer
-deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-updates main/debian-installer restricted/debian-installer
-deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-security main/debian-installer restricted/debian-installer
+参照するミラーを以下の3行のみにする
+deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty main restricted main/debian-installer restricted/debian-installer multiverse/debian-installer
+deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-updates main/debian-installer restricted/debian-installer multiverse/debian-installer
+deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-security main/debian-installer restricted/debian-installer multiverse/debian-installer
 
 # apt-mirror
 /var/spool/apt-mirror以下にインストール用のデータが複製されるので，Webサーバに適当に配置する
