@@ -4,10 +4,10 @@
 
 ```
 # apt-get install apt-mirror
-# vi /etc/apt-source
+# vi /etc/apt/sources.list
 
-ミラーを以下の3行のみにする
-deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty main/debian-installer restricted/debian-installer
+ミラーを以下の3行のみにする(1番上の1行だけでいいかも？)
+deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty main restricted main/debian-installer restricted/debian-installer
 deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-updates main/debian-installer restricted/debian-installer
 deb-amd64 http://jp.archive.ubuntu.com/ubuntu trusty-security main/debian-installer restricted/debian-installer
 
