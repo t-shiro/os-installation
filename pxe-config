@@ -38,12 +38,22 @@ label centos6-kickstart
       append ks=http://172.21.67.200/installmirror/kickstart/centos6.cfg load initrd=images/centos6/initrd.img devfs=nomount
 
 label ubuntu-server-trusty-auto
-      menu label [!!!DANGER!!!] Ubuntu server with preseed
+      menu label [!!!DANGER!!!] trusty server with preseed
       kernel images/ubuntu-trusty/amd64/linux
       append vga=normal initrd=images/ubuntu-trusty/amd64/initrd.gz url=http://172.21.67.200/installmirror/preseed/trusty/server.cfg locale=en_US hostname=ubuntu keyboard-configuration/layoutcode=en console-setup/ask_detect=false keyboard-configuration/layoutcode=en interface=eth0
 
 label ubuntu-desktop-trusty-auto
-      menu label [!!!DANGER!!!] Ubuntu desktop with preseed
+      menu label [!!!DANGER!!!] trusty desktop with preseed
       kernel images/ubuntu-trusty/amd64/linux
       append vga=normal initrd=images/ubuntu-trusty/amd64/initrd.gz url=http://172.21.67.200/installmirror/preseed/trusty/desktop.cfg locale=en_US hostname=ubuntu keyboard-configuration/layoutcode=en console-setup/ask_detect=false keyboard-configuration/layoutcode=en interface=eth0
+
+label ubuntu-server-xenial-auto
+      menu label [!!!DANGER!!!] xenial server with preseed
+      kernel images/ubuntu-xenial/amd64/linux
+      append vga=normal initrd=images/ubuntu-xenial/amd64/initrd.gz url=http://172.21.67.200/installmirror/preseed/xenial/server.cfg locale=en_US hostname=ubuntu keyboard-configuration/layoutcode=en console-setup/ask_detect=false keyboard-configuration/layoutcode=en interface=eth0
+
+label ubuntu-desktop-xenial-auto
+      menu label [!!!DANGER!!!] xenial desktop with preseed
+      kernel images/ubuntu-xenial/amd64/linux
+      append vga=normal initrd=images/ubuntu-xenial/amd64/initrd.gz url=http://172.21.67.200/installmirror/preseed/xenial/desktop.cfg locale=en_US hostname=ubuntu keyboard-configuration/layoutcode=en console-setup/ask_detect=false keyboard-configuration/layoutcode=en interface=eth0
 
